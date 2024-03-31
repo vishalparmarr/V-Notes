@@ -19,6 +19,7 @@
     "query-string": "^8.1.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-icons": "^5.0.1",
     "sanity": "^3.25.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7"
