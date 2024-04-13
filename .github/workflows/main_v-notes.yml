@@ -21,9 +21,10 @@ jobs:
         with:
           node-version: '20.x'
 
-      - name: npm install, build, and test
+      - name: Install Node.js
         run: |
           npm install
+          npm run build
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
