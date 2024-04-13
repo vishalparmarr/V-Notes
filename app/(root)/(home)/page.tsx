@@ -28,9 +28,7 @@ const Page = async ({ searchParams }: Props) => {
           <h1 className="sm:heading1 heading2 mb-6 text-center text-gradient_blue-purple">
             V Notes
           </h1>
-          <p className="text-white-800 text-center font-poppins font-semibold-4 justify-center">
-            A final place for all handwritten notes and the best resources
-          </p>
+          
         </div>
         <SearchForm />
       </section>
