@@ -3,14 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
-  id: string;
   title: string;
   image: string;
   downloadNumber: number;
   downloadLink: string;
 }
 
-const ResourceCard = ({ id, title, image, downloadNumber, downloadLink }: Props) => {
+const ResourceCard = ({ title, image, downloadNumber, downloadLink }: Props) => {
   return (
     <Card className="w-full max-w-fit border-0 !bg-transparent sm:max-w-[356px]">
       <Link href={downloadLink} target="_blank">

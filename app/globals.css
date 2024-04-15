@@ -238,3 +238,15 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+@layer components {
+  .drop1 {
+    @apply w-full px-6 py-4 xs:px-8 flex-start font-bold flex-col;
+  }
+  .drop2 {
+    @apply flex items-center gap-2 text-base;
+  }
+  .drop3 {
+    @apply text-white-800 text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 px-4 py-2;
+  }
+}

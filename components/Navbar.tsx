@@ -4,26 +4,73 @@ import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { CiCoffeeCup } from "react-icons/ci";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   return (
     <nav className="flex-center fixed top-0 z-50 w-full border-b-2 border-black-200 bg-black-100 py-5 text-white">
       <div className="flex-between mx-auto w-full max-w-screen-2xl px-6 xs:px-6 sm:px-16">
         <Link href="/">
-          <Image 
-          src="/jsm-logo.svg" 
-          width={50} 
-          height={40}
-          alt="V-logo"/>
+          <Image src="/jsm-logo.svg" width={50} height={40} alt="V-logo" />
         </Link>
 
-        <Image
-          src="/hamburger-menu.svg"
-          width={30}
-          height={30}
-          alt="Hamburger Menu"
-          className="block md:hidden"
-        />
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Image
+              src="/hamburger-menu.svg"
+              width={30}
+              height={30}
+              alt="Hamburger Menu"
+              className="block md:hidden"
+            />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="drop3">
+            <DropdownMenuItem className="drop1">
+              <Link
+                href="https://vishalparmarportfolio.live"
+                target="_blank"
+                className="drop2"
+              >
+                My Portfolio
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="drop1">
+              <Link
+                href="https://github.com/vishalparmarr"
+                target="_blank"
+                className="drop2"
+              >
+                <FiGithub />
+                GitHub
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="drop1">
+              <Link
+                href="https://www.linkedin.com/in/parmar-vishal"
+                target="_blank"
+                className="drop2"
+              >
+                <FaLinkedin />
+                LinkedIn
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="drop1">
+              <Link
+                href="https://www.buymeacoffee.com/vishalparmar"
+                target="_blank"
+                className="drop2"
+              >
+                <CiCoffeeCup />
+                Buy Me A Coffee
+              </Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
 
         <ul className="flex-center gap-x-2 max-md:hidden md:gap-x-5">
           <li

@@ -1,8 +1,0 @@
-{
-    "appService.zipIgnorePattern": [
-        "node_modules{,/**}",
-        ".vscode{,/**}"
-    ],
-    "appService.defaultWebAppToDeploy": "/subscriptions/677e5569-6ffd-45f6-9654-e0ed0c00ee75/resourceGroups/Vishal/providers/Microsoft.Web/sites/V-Notes",
-    "appService.deploySubpath": "."
-}
