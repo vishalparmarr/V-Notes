@@ -3,7 +3,6 @@ import { readClient } from './lib/client';
 import { buildQuery } from './utils';
 
 interface GetResourcesParams {
-  id: string;
   query: string;
   category: string;
   page: string;

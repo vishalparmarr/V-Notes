@@ -28,7 +28,7 @@ const Page = async ({ searchParams }: Props) => {
           <h1 className="sm:heading1 heading2 mb-6 text-center text-gradient_blue-purple">
             V Notes
           </h1>
-          
+          <p className="text-white-800">A final place for all handwritten notes and best resources</p>
         </div>
         <SearchForm />
       </section>
@@ -46,7 +46,6 @@ const Page = async ({ searchParams }: Props) => {
             <ResourceCard
               key={resource._id}
               title={resource.title}
-              id={resource._id}
               image={resource.image}
               downloadNumber={resource.views}
               downloadLink={resource.downloadLink}
@@ -67,7 +66,6 @@ const Page = async ({ searchParams }: Props) => {
             <ResourceCard
               key={resource._id}
               title={resource.title}
-              id={resource._id}
               image={resource.image}
               downloadNumber={resource.views}
               downloadLink={resource.downloadLink}

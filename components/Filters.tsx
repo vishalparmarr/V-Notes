@@ -34,7 +34,7 @@ const Filters = () => {
     router.push(newUrl, { scroll: false });
   };
   return (
-    <ul className="text-white-800 body-text no-scrollbar flex w-full max-w-full py-12 whitespace-normal sm:max-w-2xl mr-48 ml-16">
+    <ul className="text-white-800 body-text no-scrollbar flex w-full max-w-full py-12 sm:max-w-2xl mr-48 ml-16">
       {links.map((link) => (
         <button
           key={link}
