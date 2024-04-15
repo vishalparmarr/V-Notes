@@ -34,14 +34,14 @@ const Filters = () => {
     router.push(newUrl, { scroll: false });
   };
   return (
-    <ul className="text-white-800 body-text no-scrollbar flex w-full max-w-full py-12 sm:max-w-2xl mr-48 ml-16">
+    <ul className="text-white-800 body-text no-scrollbar flex w-full max-w-full gap-2 py-12 overflow-auto sm:max-w-2xl">
       {links.map((link) => (
         <button
           key={link}
           onClick={() => handleFilter(link)}
           className={`${
             active === link ? "gradient_blue-purple" : ""
-          } whitespace-nowrap rounded-lg px-6 py-2.5`}
+          } whitespace-nowrap rounded-lg px-2.5 py-2.5`}
         >
           {link}
         </button>
