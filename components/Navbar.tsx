@@ -36,6 +36,13 @@ const Navbar = () => {
                 target="_blank"
                 className="drop2"
               >
+                <Image
+                  src="/logo.png"
+                  height={55}
+                  width={35}
+                  alt="logo"
+                  className=""
+                />
                 My Portfolio
               </Link>
             </DropdownMenuItem>

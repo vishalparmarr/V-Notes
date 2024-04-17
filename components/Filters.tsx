@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { formUrlQuery } from "@/sanity/utils";
 
-const links = ["All", "Frontend", "Backend", "Programming languages", "Core subjects", "Other"];
+const links = ["All", "Frontend", "Backend", "Programming", "Engineering", "Other"];
 
 const Filters = () => {
   const [active, setActive] = useState("");
@@ -41,7 +41,7 @@ const Filters = () => {
           onClick={() => handleFilter(link)}
           className={`${
             active === link ? "gradient_blue-purple" : ""
-          } whitespace-nowrap rounded-lg px-2.5 py-2.5`}
+          } whitespace-nowrap rounded-lg px-4 py-2.5`}
         >
           {link}
         </button>
