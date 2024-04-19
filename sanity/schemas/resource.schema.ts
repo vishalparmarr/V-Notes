@@ -27,6 +27,7 @@ const schema = {
       title: 'Views',
       type: 'number',
       initialValue: 0,
+      readOnly: true,
     },
     {
       name: 'poster',
@@ -43,7 +44,7 @@ const schema = {
       type: 'string',
       validations: (Rule : any) => Rule.required(),
       options : {
-        list : ['frontend', 'backend', 'Programming','Engineering', 'other']
+        list : ['frontend', 'backend', 'programming','engineering', 'other']
         
       }
     }
