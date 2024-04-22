@@ -25,7 +25,7 @@ const Page = async ({ searchParams }: Props) => {
             V Notes
           </h1>
           <p className="text-white-800">
-            A final place for all handwritten notes and best resources
+            A One Stop Solution for all the handwritten notes and other resources
           </p>
         </div>
         <SearchForm />

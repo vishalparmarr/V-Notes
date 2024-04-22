@@ -3,25 +3,30 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
 interface Props {
   title: string;
   image: string;
-  downloadNumber: number;
   downloadLink: string;
+  downloadNumber: number;
 }
 
-const ResourceCard = ({
-  title,
-  image,
-  downloadNumber: initialDownloadNumber,
-  downloadLink,
-}: Props) => {
-  const [downloadNumber, setDownloadNumber] = useState(initialDownloadNumber);
+const ResourceCard = ({ title, image, downloadLink }: Props) => {
+  const [downloads, setDownloads] = useState(0);
+
+  useEffect(() => {
+    const localStorageKey = `downloads-${title}`;
+    const savedDownloads = localStorage.getItem(localStorageKey);
+    if (savedDownloads !== null) {
+      setDownloads(Number(savedDownloads));
+    }
+  }, [title]);
 
   const handleClick = () => {
-    setDownloadNumber(downloadNumber + 1);
+    const localStorageKey = `downloads-${title}`;
+    const newDownloads = downloads + 1;
+    setDownloads(newDownloads);
+    localStorage.setItem(localStorageKey, String(newDownloads));
   };
 
   return (
@@ -45,7 +50,7 @@ const ResourceCard = ({
       <CardContent className="flex-between mt-4 p-0">
         <div className="text-white flex-center body-medium gap-1.5">
           <Image src="/downloads.svg" width={20} height={20} alt="download" />
-          {downloadNumber}
+          {downloads}
         </div>
         <Link
           href={downloadLink}

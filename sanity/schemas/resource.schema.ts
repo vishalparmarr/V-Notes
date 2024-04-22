@@ -27,7 +27,6 @@ const schema = {
       title: 'Views',
       type: 'number',
       initialValue: 0,
-      readOnly: true,
     },
     {
       name: 'poster',
