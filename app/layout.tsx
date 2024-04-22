@@ -10,10 +10,10 @@ export const metadata: Metadata = {
     keywords: "handwritten notes, resources, notes, handwritten, handwritten notes, resources, notes, handwritten",
     'theme-color': '#0d1117',
     'color-scheme': 'dark only',
-    'twitter:image': 'https://ibb.co/JcD7B8J',
+    'twitter:image': 'https://ibb.co/kGKscQH',
     'twitter:card': 'summary_large_image',
     'twitter:site': '@vercel',
-    "og:image": "https://ibb.co/JcD7B8J",
+    "og:image": "https://ibb.co/kGKscQH",
     "og:url": "www.vnotes.me",
     "og:type": "website",
   }
